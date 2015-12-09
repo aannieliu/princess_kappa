@@ -3,7 +3,13 @@
 
 
 
-<p><img src="images/photo.png" align="middle"></p>
+
+
+
+
+<p align="center">
+<images/photo.png>
+</p>
 
  
 
