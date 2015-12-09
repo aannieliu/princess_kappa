@@ -1,7 +1,7 @@
 
 #Is Leonardo DiCaprio going to win an Oscar at last?
 
-![photo](image/photo.img)
+![photo](images/photo.img)
 
 [Image credit 1](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg) .
 [Image credit 2](http://umlconnector.com/wp-content/uploads/AE-Sad-Leo.png)
@@ -110,33 +110,33 @@ We scrapped [wikipedia page](https://en.wikipedia.org/wiki/2015_in_film) for the
 ### 3.1 Run Time
 First, let us look at the run time of winner and nominee movies, shown in fig 2. The green shows the runtime of the nominees and the red shows the runtime of the winners. We also plot the mean and median of each group. The mean of nominees is 24 minutes less than the mean of the winners. The median of the nominees is 14 minutes less than that of the winners. Though the mean and median are different in each group, we cannot tell if movie runtime is a feature that explicitly divides the winners from the nominees because the distributions are very much overlapped. 
 
-![histogram](image/histogram.png)
+![histogram](images/histogram.png)
 
 ### 3.2 Budget and Box-office 
 Besides runtime, we think box office and budget might also play roles in winning oscar. The figure below shows the box office and budget of winning and nominee movies respectively. For box-office, the winning movies tend to have a more uniform distribution than all the nominee movies in USD dollars. While for the budget, winning movies have approximately the same distribution as nominee. Therefore, box-office might be a significant feature in the model. However, it can also be that the movie has won a oscar so more people tend to watch that movie. To deal with this issue, we should have only scarped the box office until right before the oscar. Yet due to the time issue, we just simply scraped the box office until now. 
 
-![bo](image/bo.png)
+![bo](images/bo.png)
 
-![budget](image/budget.png)
+![budget](images/budget.png)
 
 ### 3.3 Age and credit of directors and actors
 The first one is a comparison of the mean of the actors' age at the time of their nominations for the winners and the nominees. The second to fourth are similar comparisons. We used the same convention of using green for the nominees and red for the winners. The distributions of the two groups overlap, giving us no additional information on how to distinguish between the winners and the nominees. 
 
-![ac](image/ac.png)
+![ac](images/ac.png)
 
 ### 3.4 Genre 
 To do more exploration on the data, we plot the mean credits of actors and directors in each year for each genre of movie. We can see that actors have higher credits than director in general. By looking at the percentage of genre for nominee and winning movies, we can have some general idea of what kind of genre has larger chance of winning. For example, 'Drama' and 'Romance' have high chance of being nominated and winner.
 
-![genre](image/genre.png)
+![genre](images/genre.png)
 
-![genre2](image/genre2.png)
+![genre2](images/genre2.png)
 
 ### 3.5 Geography and Birthplace
 Just for fun, we also plot two world maps to show where are the actors and directors come from. Most of the actors and directors are from America and Europe, which makes sense because most of the movies in our data come from Hollywood. 
 
-![map1](image/map1.png)
+![map1](images/map1.png)
 
-![map2](image/map2.png)
+![map2](images/map2.png)
 
 
 
