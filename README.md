@@ -199,16 +199,19 @@ By comparing the best-performing SVM ROC curve with the highest AUC with the log
 #insert photo
 
 ##3.4. Random Forest and Ensemble Methods
-Besides logistics regressio and Random forest, we also try to use random forest and ensemble methods for prediction. Recall from class that the random forest technique works by aggregating the results from a number of randomly perturbed decision trees constructed to explain the data.
+Besides logistics regressio and Random forest, we also try to use random forest and ensemble methods for prediction.
 
-Below in **Part 4**, we show the predictions of the random forest model, there are 5 movies in total. We can see that these 5 movies are quite different from those predicted from the logistics model. It indicates that our models are not consistent with the predictions, therefore lower the reliability of the predictions. Also, the predictions from random forest are not stable. In other words, the movies being predicted are not the same everytime.
+####3.4.1 Random Forest and Ensemble Methods
+Recall from class that the random forest technique works by aggregating the results from a number of randomly perturbed decision trees constructed to explain the data.
 
-####3.4.1. Relative Importance
+Below in **Part 4**, we show the predictions of the random forest model, there are 5 movies in total. We can see that these 5 movies are quite different from those predicted from the logistics model. It indicates that our models are not consistent with the predictions, therefore lower the reliability of the predictions. Also, the predictions from random forest are not stable, that is, the number of positive predictions it returns varies with each run. In other words, the movies being predicted are not the same everytime.
+
+####3.4.2 Relative Importance
 Following the standard procedure of random forest, we plot out the relative importance of features. We can see that tomatoUserReviews, Year, Runtime and A_mean_age are among the top important features.
 
 #insert photo here
 
-####3.4.2 AdaBoost Classifier
+####3.4.3 AdaBoost Classifier
 We also use the AdaBoost classifier from the lab to make prediction to see if there is any different. The method gives us no positive predictions on the 2015 data set.
 
 
