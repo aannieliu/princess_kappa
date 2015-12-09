@@ -139,10 +139,10 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 ![map2](images/map2.png)
 
 
-##3. Model Training and Testing
+##3. Model Fitting and Training
 Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
 
-Please see iPython notebook [Model](Model/Model.ipynb) for our complete analysis. 
+Please see iPython notebook [Model](Model.ipynb) for our complete analysis. 
 
 Here's a summary of our model fitting results and prediction results.
 
@@ -188,14 +188,36 @@ Finally, we insert a ROC curve comparison of all of our models. Notice that the 
 
 
 ###3.3. Logistic
+With the SVMs failing to predict positive results, we try Logistic Regression. This part of the code documents our attempt. Then we use the data balancing technique on logistics. The accuracy on training data: 0.68 and the accuracy on test data: 0.64. The precision score also improves. It is now 0.92 on the negative test set and 0.27 on the positive test set. We should be able to make positive predictions on the 2015 data set. 
+
+Note that our dataset is extremely unbalanced. Therefore we should not accept the default 0.5 threshold value of 0.5, but should set it to a lower value. By setting the threhold value to be 0.2, which is approximately the same as the percentage of positive samples in our training data set. We make all the movies that are predicted to win into a dataframe. We will present the result in **Part 4** below.
+
+We also make a comparison of the ROC curves.
+
+By comparing the best-performing SVM ROC curve with the highest AUC with the logtistics model, we can see that the logistics model performs better based on the ROC curve. Also, the ROC curve of Logistis is smoother than that of the SVM.
+
+#insert photo
+
+##3.4. Random Forest and Ensemble Methods
+Besides logistics regressio and Random forest, we also try to use random forest and ensemble methods for prediction. Recall from class that the random forest technique works by aggregating the results from a number of randomly perturbed decision trees constructed to explain the data.
+
+Below in **Part 4**, we show the predictions of the random forest model, there are 5 movies in total. We can see that these 5 movies are quite different from those predicted from the logistics model. It indicates that our models are not consistent with the predictions, therefore lower the reliability of the predictions. Also, the predictions from random forest are not stable. In other words, the movies being predicted are not the same everytime.
+
+####3.4.1. Relative Importance
+Following the standard procedure of random forest, we plot out the relative importance of features. We can see that tomatoUserReviews, Year, Runtime and A_mean_age are among the top important features.
+
+#insert photo here
+
+####3.4.2 AdaBoost Classifier
+We also use the AdaBoost classifier from the lab to make prediction to see if there is any different. The method gives us no positive predictions on the 2015 data set.
+
+
+Therefore, we used SVM, logistics regression, Random forest and AdaBoost classifier to make our predictions. Only logistics and random forest gave us some movie predictions. They are:
+
+##4. Prediction results
 
 
 
-
-
-
-
-4. Prediction results
 5. Conclusion
 7. 
 8. Final Analysis: What did you learn about the data? How did you answer the questions? How can you justify your answers?
