@@ -5,10 +5,6 @@
 
 <p><img src="images/photo.png" align="middle"></p>
 
-
-<p align="center">
-<images/photo.png>
-</p>
  
 
 [Image credit 1](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg)
