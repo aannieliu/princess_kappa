@@ -184,7 +184,7 @@ The accuracy score and the precision score from this model is not much different
 
 Finally, we insert a ROC curve comparison of all of our models. Notice that the linear SVM with all features gives the best ROC curve. Then we plot the ROC curve of the Linear SVM model. Notice that our curve is discrete rather than smoothly curved. This means that the model can only provide discrete predictions, rather than a continous score, due to the lack of samples wo have and the small number of continuous features we have.
 
-![ROC curve comparison]()
+![ROC curve comparison](roc.png)
 
 
 ###3.3. Logistic
