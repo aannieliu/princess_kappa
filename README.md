@@ -83,10 +83,10 @@ This project will contain:
 5. Conclusion
 
 
-##2 Scraping and Constructing Data Frame
+##1. Scraping and Constructing Data Frame
 Before we start scraping, let's spend some time discussing the data source and the scrapping methods we used.
 
-###2.1 A short discussion on datasource and scraping methods
+###1.1 A short discussion on datasource and scraping methods
 The scrapping contains two parts, one for all the movies, actors and actresses nominated and won before the 87th Oscars in 2015, the other for all movies that are eligible for nomination in the 88th Oscars (i.e. all movies in 2015, from midnight at the start of 1 January to midnight at the end of 31 December).
 
 **Part 1** For movies released before 2015
@@ -104,34 +104,34 @@ We also scrapped wikipedia for all the nominated movies, then scrapped the budge
 We scrapped [wikipedia page](https://en.wikipedia.org/wiki/2015_in_film) for the list of movies released in 2015 up to the date of the scape, which is 4th of December. Because the movies elegible for the Oscar [a3_clean_wiki_movie_df](a3_clean_wiki_movie_df.ipynb).
 
 
-##3. Exploratory Data Analysis (EDA).
+##2. Exploratory Data Analysis (EDA).
 After we have our dataset, we can do some exploratory data analyasis. Please see iPython notebook [EDA](EDA.ipynb) for our complete analysis. We take excerpt of some of our results here. Please note that there more information on the file.
 
-### 3.1 Run Time
+### 2.1 Run Time
 First, let us look at the run time of winner and nominee movies, shown in fig 2. The green shows the runtime of the nominees and the red shows the runtime of the winners. We also plot the mean and median of each group. The mean of nominees is 24 minutes less than the mean of the winners. The median of the nominees is 14 minutes less than that of the winners. Though the mean and median are different in each group, we cannot tell if movie runtime is a feature that explicitly divides the winners from the nominees because the distributions are very much overlapped. 
 
 ![histogram](images/histogram.png)
 
-### 3.2 Budget and Box-office 
+### 2.2 Budget and Box-office 
 Besides runtime, we think box office and budget might also play roles in winning oscar. The figure below shows the box office and budget of winning and nominee movies respectively. For box-office, the winning movies tend to have a more uniform distribution than all the nominee movies in USD dollars. While for the budget, winning movies have approximately the same distribution as nominee. Therefore, box-office might be a significant feature in the model. However, it can also be that the movie has won a oscar so more people tend to watch that movie. To deal with this issue, we should have only scarped the box office until right before the oscar. Yet due to the time issue, we just simply scraped the box office until now. 
 
 ![bo](images/bo.png)
 
 ![budget](images/budget.png)
 
-### 3.3 Age and credit of directors and actors
+### 2.3 Age and credit of directors and actors
 The first one is a comparison of the mean of the actors' age at the time of their nominations for the winners and the nominees. The second to fourth are similar comparisons. We used the same convention of using green for the nominees and red for the winners. The distributions of the two groups overlap, giving us no additional information on how to distinguish between the winners and the nominees. 
 
 ![ac](images/ac.png)
 
-### 3.4 Genre 
+### 2.4 Genre 
 To do more exploration on the data, we plot the mean credits of actors and directors in each year for each genre of movie. We can see that actors have higher credits than director in general. By looking at the percentage of genre for nominee and winning movies, we can have some general idea of what kind of genre has larger chance of winning. For example, 'Drama' and 'Romance' have high chance of being nominated and winner.
 
 ![genre](images/genre.png)
 
 ![genre2](images/genre2.png)
 
-### 3.5 Geography and Birthplace
+### 2.5 Geography and Birthplace
 Just for fun, we also plot two world maps to show where are the actors and directors come from. Most of the actors and directors are from America and Europe, which makes sense because most of the movies in our data come from Hollywood. 
 
 ![map1](images/map1.png)
@@ -139,7 +139,59 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 ![map2](images/map2.png)
 
 
-3. Model Fitting and Training
+##3. Model Fitting and Training
+Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
+
+Please see iPython notebook [Model](Model.ipynb) for our complete analysis. 
+
+Here's a summary of our model fitting results and prediction results.
+
+###3.1 Baseline
+Like any other model training project, we give a baseline model, which is that no movies wins the Oscars. Dince only 20% of films in our whole data set have won the Best Picture award, this baseline will give us an accuracy of 80% on the whole dataset. The accuracy score of the baseline on the test set and the training set is also the percentage of no-award wovies. The accuracy score on the training set is 79.8% and the accuracy score on the test set is 83.7%.
+
+###3.2 SVM
+Then we spend much time in training several varieties of SVM models.
+
+####3.2.1 Linear SVM
+We set up a classifier using LinearSVC. This algorithm implements a linear SVM. We explicitly pass the standard SVM hinge loss. This is only the initial step of the list of SVM classifiers we will try.
+
+The classification returns accuracy on training data: 0.80 and accuracy on test data: 0.84. From the comfusion matrix, we see that this model is similar to predicting that no movie wins the award. Therefore, when we fit the model on the 2015 data and predict the winners for the 88th Oscar, we might have no winning movie. This is indeed the case.
+
+####3.2.2 Feature Select SVM
+We will use feature select SVM in this part of our analysis. This model selects 25 most important features and fits linear SVM classifier using the selected features.
+
+This model does not do much better than the previous Linear SVM with all features one, score-wise. This model still predict that all movies earn no award.
+
+####3.2.3 Linear SVM on Balanced Set
+One of the reasons for this is that SVM does not do terribly well on an unbalanced data set, so now we balance training set to test set for training. There are many more negative samples in the training set. We want to balance the negative samples to the positive samples. So we concatenate all the indexes and use them to select a new training set from the old one.
+
+After constructing a balanced training set at hand, we now train the linear SVM on the balance set and on all features. Note that this does not fit the real world sinario because there are a lot more movies that doesn't have any Oscar awards the those who wins the award. However, for the sake of giving us some non-trivial prediction, we test out this model.
+Notice that because we have balanced the training set, the accuracy score on the trainign set is now 0.5, and the accuracy score on the test data is 0.16, which suggests the model now predicts that all movies win the award. This does not give us much predictive confidence. This model also predicts 0 winner.
+
+####3.2.4 RBF Based Pipelined (feature-selected) SVM on the Subsampled Balanced Set
+Let us try a Radial Basis Function (RBF) Kernel, so that we are not restricted to the linear SVM. Note that we use the subsempled set here.
+
+This model gives us some result. Notice that the model no longer predicts no winning movies, the accuracy on training data: 0.70 and accuracy on test data: 0.66. The precision score on the positive test set is now 0.23, which is an improvement from the 0 in previous models. However, when we implement the model on the training set, we still get no positive prediction.
+
+####3.2.5 Refit RBF on the Entire Balanced Data Set
+Rather than fitting RBF on the subsampled data set, we try to fit it on the balanced data set and see if we do any better. We get accuracy on training data: 0.59 and accuracy on test data: 0.64. The precision on the positive test sets is 0.24. We get 0 winner from this model.
+
+
+####3.2.6 SVM with Polynomial Degree 10
+In this final SVM model fitting, we try the SVM model with Polynomial with degree 10. Note: In the process of finding the best degree, we tried several degrees and find that they do not make much difference when the degree is larger than 3.
+
+The accuracy score and the precision score from this model is not much different from the previous one, therefore, there is no surprise that we see no positive prediction when we fit the model to the 2015 data.
+
+Finally, we insert a ROC curve comparison of all of our models. Notice that the linear SVM with all features gives the best ROC curve. Then we plot the ROC curve of the Linear SVM model. Notice that our curve is discrete rather than smoothly curved. This means that the model can only provide discrete predictions, rather than a continous score, due to the lack of samples wo have and the small number of continuous features we have.
+
+![ROC curve comparison]()
+
+
+###3.3. Logistic
+
+
+
+
 
 
 
