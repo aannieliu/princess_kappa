@@ -139,7 +139,7 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 ![map2](images/map2.png)
 
 
-##3. Model Fitting and Training
+##3. Model Training and Testing
 Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
 
 Please see iPython notebook [Model](Model.ipynb) for our complete analysis. 
