@@ -2,19 +2,11 @@
 #Is Leonardo DiCaprio going to win an Oscar at last?
 
 
+ <img style="float: right;" src="images/photo.png"> 
 
 
-
-
-
-<p align="center">
-<images/photo.png>
-</p>
-
- 
-
-[Image credit 1](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg)
-[Image credit 2](http://umlconnector.com/wp-content/uploads/AE-Sad-Leo.png)
+[[Image credit 1]](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg)
+[[Image credit 2]](http://umlconnector.com/wp-content/uploads/AE-Sad-Leo.png)
 
 
 要求
@@ -39,7 +31,6 @@ Describe the storytelling elements and goals in your process notebook and show u
 ##1  Overview and Motivation
 
 ###1.1 Motivation
-#Provide an overview of the project goals and the motivation for it. Consider that this will be read by people who did not see your project proposal.
 
 The Academy Awards, more commonly knows as the Oscars, is one of the most anticipated and oldest entertainment annual awards ceremonies in the world. Ever since 1929, the Oscars has honored cinematic achievements (usually) every February for 87 years. Each year, the media and cinema lovers try to predict the winners before the grand ceremony. This year, with two months to go until another exciting Oscars (the 88th), we wish to join the crowd of spectators and make our own predictions on which movie and which actors and actresses will most probably take the golden statue home. 
 
@@ -88,11 +79,8 @@ This project will contain:
 1. Scraping the web and creating the dataset for the prediction.
 2. Exploratory Data Analysis (EDA).
 3. Model fitting and training
-4. Prediction
+4. Prediction results
 5. Conclusion
-
-⧸⧸
-
 
 
 ##2 Scraping and constructing data frame
@@ -117,6 +105,8 @@ We scrapped [wikipedia page](https://en.wikipedia.org/wiki/2015_in_film) for the
 
 
 ##3. Exploratory Data Analysis (EDA).
+After we have our dataset, we can do some exploratory data analyasis. Please see iPython notebook [EDA](EDA.ipynb) for our complete analysis. We take excerpt of some of our results here. Please note that there more information on the file.
+
 ### 3.1 Run Time
 First, let us look at the run time of winner and nominee movies, shown in fig 2. The green shows the runtime of the nominees and the red shows the runtime of the winners. We also plot the mean and median of each group. The mean of nominees is 24 minutes less than the mean of the winners. The median of the nominees is 14 minutes less than that of the winners. Though the mean and median are different in each group, we cannot tell if movie runtime is a feature that explicitly divides the winners from the nominees because the distributions are very much overlapped. 
 
