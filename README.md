@@ -28,9 +28,9 @@ Presentation: Present your final results in a compelling and engaging way using 
 
 Describe the storytelling elements and goals in your process notebook and show us sketches and screenshots of different website iterations. As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your process and results.
 
-##1  Overview and Motivation
+##Overview and Motivation
 
-###1.1 Motivation
+###Motivation
 
 The Academy Awards, more commonly knows as the Oscars, is one of the most anticipated and oldest entertainment annual awards ceremonies in the world. Ever since 1929, the Oscars has honored cinematic achievements (usually) every February for 87 years. Each year, the media and cinema lovers try to predict the winners before the grand ceremony. This year, with two months to go until another exciting Oscars (the 88th), we wish to join the crowd of spectators and make our own predictions on which movie and which actors and actresses will most probably take the golden statue home. 
 
@@ -71,7 +71,7 @@ What's Eating Gilbert Grape (1993) ) </td>
 </tr>
 </table>
 
-###1.2 Project Overview and Flow
+###Project Overview and Flow
 
 In order to predict the winners of next year's Oscars, we will collect data on movies, actors and actresses from IMDb, Rotten Tomatoes and Wikipedia. After obtaining the data and constructing the dataset, we will explore the data and train several classification models for our predictions. 
 
@@ -83,7 +83,7 @@ This project will contain:
 5. Conclusion
 
 
-##2 Scraping and constructing data frame
+##2 Scraping and Constructing Data Frame
 Before we start scraping, let's spend some time discussing the data source and the scrapping methods we used.
 
 ###2.1 A short discussion on datasource and scraping methods
@@ -139,7 +139,18 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 ![map2](images/map2.png)
 
 
+3. Model Fitting and Training
 
+
+
+4. Prediction results
+5. Conclusion
+7. 
+8. Final Analysis: What did you learn about the data? How did you answer the questions? How can you justify your answers?
+
+Presentation: Present your final results in a compelling and engaging way using text, visualizations, images, and videos on your project web site.
+
+Describe the storytelling elements and goals in your process notebook and show us sketches and screenshots of different website iterations. As this will be your only chance to describe your project in detail make sure that your process book is a standalone document that fully describes your process and results.
 
 
     
