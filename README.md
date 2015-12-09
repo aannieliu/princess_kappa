@@ -2,7 +2,7 @@
 #Is Leonardo DiCaprio going to win an Oscar at last?
 
 
- <img style="float: right;" src="images/photo.png"> 
+<img style="float: right;" width=1200 height=500 src="images/photo.png"> 
 
 
 [[Image credit 1]](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg)
