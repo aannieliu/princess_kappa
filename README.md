@@ -132,6 +132,11 @@ After constructing our data, we are in shape for making predictions on which of 
 
 **Please see iPython notebook [Model](Model/Model.ipynb) for our complete analysis.**
 
+We selected 154 relavent features to put in our models. The features variable contains all the features we think would matter for predicting Academy awards. They are:
+
+Movie run time, Movie release year, Rating score from IMDb, Number of votes on IMDb, Rating score from Rotten Tomatoes (critics), Number of reviews from Rotten Tomatoes (critics), User rating score from Rotten Romatoes, Number of user reviews from Rotten Tomatoes, Indicator variables of movie genres, Movie budget in USD, Movie Box Office until Dec. 4th, 2015 in USD, Cast mean age, Cast mean credit (average number of movies featured by actors in the cast), Director mean age, Director mean credit (average number of movies directed by the directors), Weighted average of ratings on IMDb and Rotten Tomato, Total nominations of cast, Total Academy awards won by the cast, Total nominations of directors, Total Academy awards won by the directors, Indicator variables of languages,Indicator variables of countries, 
+Indicator variables of ratings. 
+
 Here's a summary of our model fitting results and prediction results.
 
 ###3.1 Baseline
