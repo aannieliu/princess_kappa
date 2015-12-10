@@ -237,35 +237,35 @@ As mentioned in **Part 3**, we only have positive predictions when we use Logist
 <tr>
 <td>Mad Max: Fury Road</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://t0.gstatic.com/images?q=tbn:ANd9GcQuK41mExh1Qv3kbXoxohWYGlcstOQ6zEnnNdSI2BGIKywQwgRI"/>
 </td>
 <td>0.189763797</td>
 </tr>
 <tr>
 <td>Straight Outta Compton</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://2ykov18qyj81ii56523ib0ue.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/straight-outta-compton-square.jpg"/>
 </td>
 <td>0.228625646</td>
 </tr>
 <tr>
 <td>Spotlight</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="https://kpbs.media.clients.ellingtoncms.com/img/news/tease/2015/11/12/spotlight-one-sheet.jpg"/>
 </td>
 <td>0.154131447</td>
 </tr>
 <tr>
 <td>Spectre</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://www.007.com/wp-content/uploads/2015/09/SITE_POSTER-1000x640.jpg"/>
 </td>
 <td>0.17022323</td>
 </tr>
 <tr>
 <td>Avengers: Age of Ultron</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
 </td>
 <td>0.357324758</td>
 </tr>
