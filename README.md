@@ -150,7 +150,7 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 ##3. Model Fitting and Training
 After constructing our data, we are in shape for making predictions on what 2015 movies are most likely to win at least one Oscars in the five hottest categories (Best Picture, Directing, Best Actor in a Leading Role, Best Actress in a Leading Role, Best Actress in a Supporting Role and Best Actor in a Supporting Role). Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
 
-**Please see iPython notebook [Model](Model/Model.ipynb) for our complete analysis. **
+**Please see iPython notebook [Model](Model/Model.ipynb) for our complete analysis.**
 
 Here's a summary of our model fitting results and prediction results.
 
@@ -217,7 +217,7 @@ Below in **Part 4**, we show the predictions of the random forest model, there a
 ####3.4.2 Relative Importance
 Following the standard procedure of random forest, we plot out the relative importance of features. We can see that tomatoUserReviews, Year, Runtime and A_mean_age are among the top important features.
 
-[relative importance](images/random_forest.png)
+![relative importance](images/random_forest.png)
 
 ####3.4.3 AdaBoost Classifier
 We also use the AdaBoost classifier from the lab to make prediction to see if there is any different. The method gives us no positive predictions on the 2015 data set.
