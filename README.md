@@ -72,7 +72,7 @@ Before we start scraping, let's spend some time discussing the data source and t
 ###1.1 A short discussion on datasource and scraping methods
 The scrapping contains two parts, one for all the movies, actors and actresses nominated and won before the 87th Oscars in 2015, the other for all movies that are eligible for nomination in the 88th Oscars (i.e. all movies in 2015, from midnight at the start of 1 January to midnight at the end of 31 December).
 
-**Part 1 For movies released before 2015 **
+**Part 1 For movies released before 2015**
 
 We started with a list of all Oscars winners and nominees in our categories of interest up to 2014. The categories are: Best Picture, Best Directing, Best Actor in a Leading Role (hereafter denoted as Best Leading Actor), Best Actress in a Leading Role (Best Leading Actress), Best Actor in a Supporting Role (Best Supporting Actor) and finally, Best Actress in a Supporting Role (Best Supporting Actress). The list is here: [academy_awards](scraping/academy_awards.csv). We took the list of all nominated and winning movies up to 2011 from [here](https://www.aggdata.com/awards/oscar) and manually added updated movies so that the file contains all nominated and winning movies up to 2014.
 
