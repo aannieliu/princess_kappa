@@ -5,9 +5,6 @@
 <img style="float: right;" width=1200 height=500 src="images/photo.png"> 
 
 
-[[Image credit 1]](http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg)
-[[Image credit 2]](http://umlconnector.com/wp-content/uploads/AE-Sad-Leo.png)
-
 
 ##Overview and Motivation
 
@@ -261,8 +258,25 @@ As mentioned in **Part 3**, we only have positive predictions when we use Logist
 | 22 | 7 Letters                      | 
 
 
+##5. Conclusion
+
+We tried SVMs, Logistic Regression, Random Forest and Ensemble Methods, along with some variations of these machine learning algorithms. Only Logistic Regression and Random Forest produced nontrivial results which are different from the baseline model. We were not able to produce as strong of a classifier as we would have expected, maybe because our training dataset is very unbalanced and many of our features are indicator variables. However, during the analysis, we were able to discover various implications about what features a winning movie would likely to have. Some strong predictors are **mean actor credits**, **run time** and **Genres** and in general, a movie is more likely to win an award if its genre is, for example, "Drama" or "Romance" (rather than "Honor"), and when its leading actors or actresses have more credits(more experienced and famous is usually the case) and when the movie is longer in length. From the variable importance score that Random Forest generated, we can also conclude that audience rating plays an important role in predicting the awards as well. We also did a simple feature exploration on all the final predicted moives, it can be viewed [here](EDA/EDA_predict.ipynb).Note that now our response variable is **winning one of the five awards**, and this mixing of responses might introduce confounding problems among the predictors. For future work, we could split the response into five awards separately and conduct model fitting on each of these award category. We also need to gather more quantitative features and take more efforts in building and selecting features.
 
 
-5. Conclusion
-
-We tried SVMs, Logistic Regression, Random Forest and Ensemble Methods, along with some variations of these machine learning algorithms. Only Logistic Regression and Random Forest produced nontrivial results which are different from the baseline model. We were not able to produce as strong of a classifier as we would have expected, maybe because our training dataset is very unbalanced and many of our features are indicator variables. However, during the analysis, we were able to discover various implications about what features a winning movie would likely to have. Some strong predictors are **mean actor credits**, **run time** and **Genres** and in general, a movie is more likely to win an award if its genre is, for example, "Drama" or "Romance" (rather than "Honor"), and when its leading actors or actresses have more credits(more experienced and famous is usually the case) and when the movie is longer in length. From the variable importance score that Random Forest generated, we can also conclude that audience rating plays an important role in predicting the awards as well. Note that now our response variable is **winning one of the five awards**, and this mixing of responses might introduce confounding problems among the predictors. For future work, we could split the response into five awards separately and conduct model fitting on each of these award category. We also need to gather more quantitative features and take more efforts in building and selecting features.
+###Image Credits:
+http://www.impawards.com/2015/posters/avengers_age_of_ultron_ver27.jpg
+http://4.bp.blogspot.com/-dWKxl5CJAY0/VeCQF9A_UvI/AAAAAAAArbA/sFVWhHPmvOk/s1600/Muhammad_-_The_Messenger_of_God_poster.jpg
+http://www.impawards.com/2015/posters/hateful_eight_ver2.jpg
+http://www.impawards.com/2015/posters/martian.jpg
+http://www.impawards.com/2015/posters/furious_seven_ver3.jpg
+http://www.impawards.com/2015/posters/straight_outta_compton.jpg
+http://www.impawards.com/intl/australia/2015/posters/mad_max_fury_road.jpg
+http://www.impawards.com/2015/posters/jurassic_world_ver2_xlg.jpg
+http://www.impawards.com/2015/posters/spectre_ver3.jpg
+http://www.impawards.com/2015/posters/bridge_of_spies.jpg
+http://www.impawards.com/intl/india/2015/posters/dilwale.jpg
+http://www.impawards.com/2015/posters/mission_impossible__rogue_nation_ver2.jpg
+http://www.impawards.com/2015/posters/spotlight_ver2.jpg
+http://www.impawards.com/2015/posters/revenant_ver2.jpg
+http://www.tasteofcinema.com/wp-content/uploads/2014/08/best-Leonardo-DiCaprio-movies.jpg
+http://umlconnector.com/wp-content/uploads/AE-Sad-Leo.png
