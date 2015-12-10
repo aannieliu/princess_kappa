@@ -73,7 +73,7 @@ What's Eating Gilbert Grape (1993) ) </td>
 
 ###Project Overview and Flow
 
-In order to predict the winners of next year's Oscars, we will collect data on movies, actors and actresses from IMDb, Rotten Tomatoes and Wikipedia. After obtaining the data and constructing the dataset, we will explore the data and train several classification models for our predictions. 
+In order to predict the winners of next year's Oscars, we will collect data on past award winning and nominated movies, actors and actresses from IMDb, Rotten Tomatoes and Wikipedia. After obtaining the data and constructing the dataset, we will explore the data and train several classification models for our predictions. 
 
 This project will contain:
 1. Scraping the web and creating the dataset for the prediction.
@@ -140,7 +140,7 @@ Just for fun, we also plot two world maps to show where are the actors and direc
 
 
 ##3. Model Fitting and Training
-Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
+After constructing our data, we are in shape for making predictions on what 2015 movies are most likely to win at least one Oscars in the five hottest categories (Best Picture, Directing, Best Actor in a Leading Role, Best Actress in a Leading Role, Best Actress in a Supporting Role and Best Actor in a Supporting Role). Now we train several classifiers on the data set to find the best one and then use the the results to predict which movies are most likely to win the Oscars in 2016. First we spend some time cleaning the data set, split it into training and testing sets, then we start testing for classifiers. 
 
 Please see iPython notebook [Model](Model.ipynb) for our complete analysis. 
 
@@ -218,6 +218,108 @@ We also use the AdaBoost classifier from the lab to make prediction to see if th
 Therefore, we used SVM, logistics regression, Random forest and AdaBoost classifier to make our predictions. Only logistics and random forest gave us some movie predictions. They are:
 
 ##4. Prediction results
+As mentioned in **Part 3**, we only have positive predictions when we use Logistic and Random Forest. We will now list them below. Please be reminded that we are asking the question: what movies are most likely to win at least one award from the five categories: Best Picture, Directing, Best Actor in a Leading Role, Best Actress in a Leading Role, Best Actress in a Supporting Role and Best Actor in a Supporting Role.
+
+####Logistic Prediction
+<table>
+<tr>
+<th>Movie</th>
+<th>Poster</th>
+<th>Probability of winning at least one award</th>
+</tr>
+<tr>
+<td>Jurassic World</td>
+<td>
+<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.170458958</td>
+</tr>
+<tr>
+<td>Mad Max: Fury Road</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.189763797</td>
+</tr>
+<tr>
+<td>Straight Outta Compton</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.228625646</td>
+</tr>
+<tr>
+<td>Spotlight</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.154131447</td>
+</tr>
+<tr>
+<td>Spectre</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.17022323</td>
+</tr>
+<tr>
+<td>Avengers: Age of Ultron</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.357324758</td>
+</tr>
+<tr>
+<td>Furious 7</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.220408039</td>
+</tr>
+<tr>
+<td>The Hateful Eight</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.243749705</td>
+</tr>
+<tr>
+<td>The Martian</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.264459014</td>
+</tr>
+<tr>
+<td>Bridge of Spies</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.187563731</td>
+</tr>
+<tr>
+<td>Muhammad: The Messenger of God</td>
+<td>
+<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+<td>0.359197788</td>
+</tr>
+</table>
+
+Random forest predictions
+
+<table>
+<tr>
+<th>Movie</th>
+<th>Poster</th>
+</tr>
+<tr>
+<td>Jurassic World</td>
+<td>
+<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+</td>
+</tr>
+</table>
 
 
 
