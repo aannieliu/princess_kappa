@@ -76,10 +76,15 @@ What's Eating Gilbert Grape (1993) ) </td>
 In order to predict the winners of next year's Oscars, we will collect data on past award winning and nominated movies, actors and actresses from IMDb, Rotten Tomatoes and Wikipedia. After obtaining the data and constructing the dataset, we will explore the data and train several classification models for our predictions. 
 
 This project will contain:
+
 1. Scraping the web and creating the dataset for the prediction.
+
 2. Exploratory Data Analysis (EDA).
+
 3. Model fitting and training
+
 4. Prediction results
+
 5. Conclusion
 
 
@@ -91,21 +96,24 @@ The scrapping contains two parts, one for all the movies, actors and actresses n
 
 **Part 1** For movies released before 2015
 
-We started with a list of all Oscars winners and nominees in our  categories of interest up to 2014. The categories are: Best Picture, Best Directing, Best Actor in a Leading Role (hereafter denoted as Best Leading Actor), Best Actress in a Leading Role (Best Leading Actress), Best Actor in a Supporting Role (Best Supporting Actor) and finally, Best Actress in a Supporting Role (Best Supporting Actress). The list is here: [academy_awards_updated.csv](academy_awards_updated.csv). We took the list of all nominated and winning movies up to 2011 from [here](https://www.aggdata.com/awards/oscar) and manually added updated movies so that the file contains all nominated and winning movies up to 2014.
+We started with a list of all Oscars winners and nominees in our  categories of interest up to 2014. The categories are: Best Picture, Best Directing, Best Actor in a Leading Role (hereafter denoted as Best Leading Actor), Best Actress in a Leading Role (Best Leading Actress), Best Actor in a Supporting Role (Best Supporting Actor) and finally, Best Actress in a Supporting Role (Best Supporting Actress). The list is here: [academy_awards](scraping/academy_awards.csv). We took the list of all nominated and winning movies up to 2011 from [here](https://www.aggdata.com/awards/oscar) and manually added updated movies so that the file contains all nominated and winning movies up to 2014.
 
-Using the list of movie titles, we scrape  IMDb using a unofficial their free unofficial public API to gather information on each movie and later about their IMDb and Rotten Tomatoes attributes. We then scraped information we think that might be useful for our predictions about the three leading actors/actresses and the directors of each movie on the list. Some example features are credits, date of birth and award nominations. For details about how we scraped the  data set, please see [r1_scrapingimdb](r1scrapingimdb.ipynb)⧸⧸scrape⧸⧸ later on⧸⧸ each actor and actress on the list
- ⧸⧸[r1_scrapingimdb](r1scrapingimdb.ipynb)⧸⧸[r1_scrapingimdb](r1scrapingimdb.ipynb)⧸⧸⧸⧸
+Using the list of movie titles, we scrape  IMDb using a unofficial their free unofficial public API to gather information on each movie and later about their IMDb and Rotten Tomatoes attributes. We then scraped information we think that might be useful for our predictions about the three leading actors/actresses and the directors of each movie on the list. Some example features are credits, date of birth and award nominations. For details about how we scraped the data set, please see [here](scraping/scrapingimdb.ipynb).
 
-We also scrapped wikipedia for all the nominated movies, then scrapped the budget and box_office information off of wikipedia. For details of this part of scrapping, please see notebooks: [a1_scrape_wiki_movie](a1_scrape_wiki_movie.ipynb), [a2_clean_wiki_movie_df](a2_clean_wiki_movie_df.ipynb), ⧸⧸[a3_clean_wiki_movie_df](a3_clean_wiki_movie_df.ipynb).[a3_clean_wiki_movie_df](a3_clean_wiki_movie_df.ipynb).
+We also scrapped wikipedia for all the nominated movies, then scrapped the budget and box-office information off of wikipedia. For details of this part of scrapping, please see the first half of [scrape_wiki notebook](scraping/scrape_wiki.ipynb).
 
 
 **Part 2** For movies released in 2015
 
-We scrapped [wikipedia page](https://en.wikipedia.org/wiki/2015_in_film) for the list of movies released in 2015 up to the date of the scape, which is 4th of December. Because the movies elegible for the Oscar [a3_clean_wiki_movie_df](a3_clean_wiki_movie_df.ipynb).
+We scrapped [wikipedia page](https://en.wikipedia.org/wiki/2015_in_film) for the list of movies released in 2015 up to the date of the scape, which is 4th of December. After constructing the list, we scraped IMDb for information on budget and box office. Details of this scrape is in the second half of [scrape_wiki notebook](scraping/scrape_wiki.ipynb). 
+
+We also scrapped IMDb API for additional information on the 2015 movies. This part of the scrape is documented [here](scraping/scrapingimdb2015.ipynb).
+
+The final table is [here](EDA/final_table.csv).
 
 
 ##2. Exploratory Data Analysis (EDA).
-After we have our dataset, we can do some exploratory data analyasis. Please see iPython notebook [EDA](EDA.ipynb) for our complete analysis. We take excerpt of some of our results here. Please note that there more information on the file.
+After we have our dataset, we can do some exploratory data analyasis. Please see iPython notebook [EDA](EDA/EDA.ipynb) for our complete analysis. We take excerpt of some of our results here. Please note that there more information on the file.
 
 ### 2.1 Run Time
 First, let us look at the run time of winner and nominee movies, shown in fig 2. The green shows the runtime of the nominees and the red shows the runtime of the winners. We also plot the mean and median of each group. The mean of nominees is 24 minutes less than the mean of the winners. The median of the nominees is 14 minutes less than that of the winners. Though the mean and median are different in each group, we cannot tell if movie runtime is a feature that explicitly divides the winners from the nominees because the distributions are very much overlapped. 
@@ -184,7 +192,7 @@ The accuracy score and the precision score from this model is not much different
 
 Finally, we insert a ROC curve comparison of all of our models. Notice that the linear SVM with all features gives the best ROC curve. Then we plot the ROC curve of the Linear SVM model. Notice that our curve is discrete rather than smoothly curved. This means that the model can only provide discrete predictions, rather than a continous score, due to the lack of samples wo have and the small number of continuous features we have.
 
-![ROC curve comparison](roc.png)
+![ROC curve comparison](images/roc.png)
 
 
 ###3.3. Logistic
@@ -196,7 +204,7 @@ We also make a comparison of the ROC curves.
 
 By comparing the best-performing SVM ROC curve with the highest AUC with the logtistics model, we can see that the logistics model performs better based on the ROC curve. Also, the ROC curve of Logistis is smoother than that of the SVM.
 
-#insert photo
+![ROC-Logistic curve comparison](images/roc_logistic.png)
 
 ##3.4. Random Forest and Ensemble Methods
 Besides logistics regressio and Random forest, we also try to use random forest and ensemble methods for prediction.
@@ -209,11 +217,10 @@ Below in **Part 4**, we show the predictions of the random forest model, there a
 ####3.4.2 Relative Importance
 Following the standard procedure of random forest, we plot out the relative importance of features. We can see that tomatoUserReviews, Year, Runtime and A_mean_age are among the top important features.
 
-#insert photo here
+[relative importance](images/random_forest.png)
 
 ####3.4.3 AdaBoost Classifier
 We also use the AdaBoost classifier from the lab to make prediction to see if there is any different. The method gives us no positive predictions on the 2015 data set.
-
 
 Therefore, we used SVM, logistics regression, Random forest and AdaBoost classifier to make our predictions. Only logistics and random forest gave us some movie predictions. They are:
 
