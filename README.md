@@ -228,90 +228,19 @@ Therefore, we used SVM, logistics regression, Random forest and AdaBoost classif
 As mentioned in **Part 3**, we only have positive predictions when we use Logistic and Random Forest. We will now list them below. Please be reminded that we are asking the question: what movies are most likely to win at least one award from the five categories: Best Picture, Directing, Best Actor in a Leading Role, Best Actress in a Leading Role, Best Actress in a Supporting Role and Best Actor in a Supporting Role.
 
 ####Logistic Prediction
-<table>
-<tr>
-<th>Movie</th>
-<th>Poster</th>
-<th>Probability of winning at least one award</th>
-</tr>
-<tr>
-<td>Jurassic World</td>
-<td>
-<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
-</td>
-<td>0.170458958</td>
-</tr>
-<tr>
-<td>Mad Max: Fury Road</td>
-<td>
-<img width=150 height=200 src="http://t0.gstatic.com/images?q=tbn:ANd9GcQuK41mExh1Qv3kbXoxohWYGlcstOQ6zEnnNdSI2BGIKywQwgRI"/>
-</td>
-<td>0.189763797</td>
-</tr>
-<tr>
-<td>Straight Outta Compton</td>
-<td>
-<img width=150 height=200 src="http://2ykov18qyj81ii56523ib0ue.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/straight-outta-compton-square.jpg"/>
-</td>
-<td>0.228625646</td>
-</tr>
-<tr>
-<td>Spotlight</td>
-<td>
-<img width=150 height=200 src="https://kpbs.media.clients.ellingtoncms.com/img/news/tease/2015/11/12/spotlight-one-sheet.jpg"/>
-</td>
-<td>0.154131447</td>
-</tr>
-<tr>
-<td>Spectre</td>
-<td>
-<img width=150 height=200 src="http://www.007.com/wp-content/uploads/2015/09/SITE_POSTER-1000x640.jpg"/>
-</td>
-<td>0.17022323</td>
-</tr>
-<tr>
-<td>Avengers: Age of Ultron</td>
-<td>
-<img width=150 height=200 src="http://t0.gstatic.com/images?q=tbn:ANd9GcRlGeugacRkKznDOtRhUCVt0AkrOTPbaaKwF9xgGZgNViyC_Xko"/>
-</td>
-<td>0.357324758</td>
-</tr>
-<tr>
-<td>Furious 7</td>
-<td>
-<img width=200 height=300 src="http://t1.gstatic.com/images?q=tbn:ANd9GcReedjA2vJSO4_6GDpsI3PShvbRqfAAEv03qaJ9qOxtiLZX0Jx7"/>
-</td>
-<td>0.220408039</td>
-</tr>
-<tr>
-<td>The Hateful Eight</td>
-<td>
-<img width=200 height=300 src="http://static.independent.co.uk/s3fs-public/thumbnails/image/2015/11/20/09/A1.jpg"/>
-</td>
-<td>0.243749705</td>
-</tr>
-<tr>
-<td>The Martian</td>
-<td>
-<img width=200 height=300 src="https://www.google.com/imgres?imgurl=http://t2.gstatic.com/images%3Fq%3Dtbn:ANd9GcTkKPZ7EIOafEsemyn6zTIDeGYthKC_Okgxi1eX6diuOT3xKWXQ&imgrefurl=http://t2.gstatic.com/images?q%3Dtbn:ANd9GcTkKPZ7EIOafEsemyn6zTIDeGYthKC_Okgxi1eX6diuOT3xKWXQ&h=1080&w=720&tbnid=8vfw2btMY63bzM:&tbnh=160&tbnw=106&docid=Qokp5CEU3y6UVM&itg=1&usg=__2q22CxTaDpSMFNraoasm9wArUEw="/>
-</td>
-<td>0.264459014</td>
-</tr>
-<tr>
-<td>Bridge of Spies</td>
-<td>
-<img width=200 height=300 src="http://cdn.wegotthiscovered.com/wp-content/uploads/BRIDGE-OF-SPIES-Poster-e1433542435366-677x400.jpg"/>
-</td>
-<td>0.187563731</td>
-</tr>
-<tr>
-<td>Muhammad: The Messenger of God</td>
-<td>
-<img width=200 height=300 src="http://realiran.org/wp-content/uploads/2015/09/Muhammad-The-Messenger-of-God-film-11.jpg"/>
-</td>
-<td>0.359197788</td>
-</tr>
-</table>
+|                        | ![p1](http://www.impawards.com/2015/posters/avengers_age_of_ultron_ver27.jpg)           | ![p2](https://upload.wikimedia.org/wikipedia/en/e/ed/Muhammad_-_The_Messenger_of_God_poster.jpg) | ![p3](http://www.impawards.com/2015/posters/hateful_eight_ver2.jpg)               | ![p4](http://www.impawards.com/2015/posters/martian.jpg)                 |
+|------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Movie                  | Avengers: Age of Ultron                                                                 | Muhammad: The Messenger of God                                                                   | The Hateful Eight                                                                 | The Martian                                                              |
+| Probability of winning | 0.388707757                                                                             | 0.327404359                                                                                      | 0.287890063                                                                       | 0.270072195                                                              |
+|                        | ![p5](http://www.impawards.com/2015/posters/furious_seven_ver3.jpg)                     | ![p6](http://www.impawards.com/2015/posters/straight_outta_compton.jpg)                          | ![p7](http://www.impawards.com/intl/australia/2015/posters/mad_max_fury_road.jpg) | ![p8](http://www.impawards.com/2015/posters/jurassic_world_ver2_xlg.jpg) |
+| Movie                  | Furious 7                                                                               | Straight Outta Compton                                                                           | Mad Max: Fury Road                                                                |                                                                          |
+| Probability of winning | 0.254411701                                                                             | 0.238794011                                                                                      | 0.214512094                                                                       |                                                                          |
+|                        | ![p9](http://www.impawards.com/2015/posters/jurassic_world_ver2_xlg.jpg)                | ![p10](http://www.impawards.com/2015/posters/spectre_ver3.jpg)                                   | ![p11](http://www.impawards.com/2015/posters/bridge_of_spies.jpg)                 | ![p12](http://www.impawards.com/intl/india/2015/posters/dilwale.jpg)     |
+| Movie                  | Jurassic World                                                                          | Spectre                                                                                          | Bridge of Spies                                                                   | Dilwale                                                                  |
+| Probability of winning | 0.204840498                                                                             | 0.197618822                                                                                      | 0.191980406                                                                       | 0.164262945                                                              |
+|                        | ![p13](http://www.impawards.com/2015/posters/mission_impossible__rogue_nation_ver2.jpg) | ![p14](http://www.impawards.com/2015/posters/spotlight_ver2.jpg)                                 | ![p15](http://www.impawards.com/2015/posters/revenant_ver2.jpg)                   |                                                                          |
+| Movie                  | Mission: Impossible - Rogue Nation                                                      | Spotlight                                                                                        | The Revenant                                                                      |                                                                          |
+| Probability of winning | 0.163706043                                                                             | 0.162100329                                                                                      | 0.156593219                                                                       |                                                                          |
 
 Random forest predictions
 
