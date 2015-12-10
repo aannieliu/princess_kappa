@@ -265,42 +265,42 @@ As mentioned in **Part 3**, we only have positive predictions when we use Logist
 <tr>
 <td>Avengers: Age of Ultron</td>
 <td>
-<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://t0.gstatic.com/images?q=tbn:ANd9GcRlGeugacRkKznDOtRhUCVt0AkrOTPbaaKwF9xgGZgNViyC_Xko"/>
 </td>
 <td>0.357324758</td>
 </tr>
 <tr>
 <td>Furious 7</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=200 height=300 src="http://t1.gstatic.com/images?q=tbn:ANd9GcReedjA2vJSO4_6GDpsI3PShvbRqfAAEv03qaJ9qOxtiLZX0Jx7"/>
 </td>
 <td>0.220408039</td>
 </tr>
 <tr>
 <td>The Hateful Eight</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=200 height=300 src="http://static.independent.co.uk/s3fs-public/thumbnails/image/2015/11/20/09/A1.jpg"/>
 </td>
 <td>0.243749705</td>
 </tr>
 <tr>
 <td>The Martian</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=200 height=300 src="https://www.google.com/imgres?imgurl=http://t2.gstatic.com/images%3Fq%3Dtbn:ANd9GcTkKPZ7EIOafEsemyn6zTIDeGYthKC_Okgxi1eX6diuOT3xKWXQ&imgrefurl=http://t2.gstatic.com/images?q%3Dtbn:ANd9GcTkKPZ7EIOafEsemyn6zTIDeGYthKC_Okgxi1eX6diuOT3xKWXQ&h=1080&w=720&tbnid=8vfw2btMY63bzM:&tbnh=160&tbnw=106&docid=Qokp5CEU3y6UVM&itg=1&usg=__2q22CxTaDpSMFNraoasm9wArUEw="/>
 </td>
 <td>0.264459014</td>
 </tr>
 <tr>
 <td>Bridge of Spies</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=200 height=300 src="http://cdn.wegotthiscovered.com/wp-content/uploads/BRIDGE-OF-SPIES-Poster-e1433542435366-677x400.jpg"/>
 </td>
 <td>0.187563731</td>
 </tr>
 <tr>
 <td>Muhammad: The Messenger of God</td>
 <td>
-<img width=200 height=300 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=200 height=300 src="http://realiran.org/wp-content/uploads/2015/09/Muhammad-The-Messenger-of-God-film-11.jpg"/>
 </td>
 <td>0.359197788</td>
 </tr>
@@ -314,9 +314,9 @@ Random forest predictions
 <th>Poster</th>
 </tr>
 <tr>
-<td>Jurassic World</td>
+<td>San Andreas</td>
 <td>
-<img width=150 height=200 src="http://screenrant.com/wp-content/uploads/Jurassic-World-Poster-Official.jpg"/>
+<img width=150 height=200 src="http://www.screenrelish.com/wp-content/uploads/2015/05/SANANDREAS.jpg"/>
 </td>
 </tr>
 </table>
