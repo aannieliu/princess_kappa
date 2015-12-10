@@ -5,6 +5,11 @@
 <img style="float: right;" width=1200 height=500 src="images/photo.png"> 
 
 
+**Harvard University Fall 2015 CS109 Final Project**
+
+**Jerry Chen, Rachel Fu, Annie Liu, Luka Zhang**
+
+
 
 ##Overview and Motivation
 
