@@ -252,19 +252,32 @@ As mentioned in **Part 3**, we only have positive predictions when we use Logist
 
 
 Random forest predictions
+|    |                                | 
+|----|--------------------------------| 
+| /  | Movie                          | 
+| 1  | Ex Machina                     | 
+| 2  | Child 44                       | 
+| 3  | Black Mass                     | 
+| 4  | Straight Outta Compton         | 
+| 5  | Fantastic Four                 | 
+| 6  | Vacation                       | 
+| 7  | Anomalisa                      | 
+| 8  | Creed                          | 
+| 9  | Sleeping with Other People     | 
+| 10 | Room                           | 
+| 11 | The Diary of a Teenage Girl    | 
+| 12 | Insidious: Chapter 3           | 
+| 13 | Captive                        | 
+| 14 | American Ultra                 | 
+| 15 | The Walk                       | 
+| 16 | Amnesia                        | 
+| 17 | Son of Saul                    | 
+| 18 | Muhammad: The Messenger of God | 
+| 19 | The Gift                       | 
+| 20 | Embrace of the Serpent         | 
+| 21 | Jackpot                        | 
+| 22 | 7 Letters                      | 
 
-<table>
-<tr>
-<th>Movie</th>
-<th>Poster</th>
-</tr>
-<tr>
-<td>San Andreas</td>
-<td>
-<img width=150 height=200 src="http://www.screenrelish.com/wp-content/uploads/2015/05/SANANDREAS.jpg"/>
-</td>
-</tr>
-</table>
 
 
 
