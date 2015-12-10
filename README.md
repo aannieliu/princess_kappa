@@ -251,10 +251,11 @@ As mentioned in **Part 3**, we only have positive predictions when we use Logist
 
 
 
-Random forest predictions
-|    |                                | 
+####Random forest predictions
+
+
+| /  |  Movie                         | 
 |----|--------------------------------| 
-| /  | Movie                          | 
 | 1  | Ex Machina                     | 
 | 2  | Child 44                       | 
 | 3  | Black Mass                     | 
